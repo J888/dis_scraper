@@ -1,0 +1,5 @@
+node_modules
+scraped_data
+
+# Ignore built ts files
+dist/**/*
