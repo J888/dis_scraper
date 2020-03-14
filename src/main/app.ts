@@ -1,9 +1,9 @@
-import express from "express"
-import fs from "fs"
-import axios from "axios"
-import { CronJob } from "cron"
-import WdwScraper from "./scraper/wdwScraper"
-import { writeOutToFile } from "./util/fileUtil"
+import express from 'express'
+import fs from 'fs'
+import axios from 'axios'
+import { CronJob } from 'cron'
+import WdwScraper from './scraper/wdwScraper'
+import { writeOutToFile } from './util/fileUtil'
 
 const PARK_HOURS_URL = process.env.PARK_HOURS_URL
 const PARK_HOURS_GENERATED_DATA_PATH = 'scraped_data/parkHours.json'
@@ -32,7 +32,7 @@ app.listen(port, async () => {
   const job = new CronJob('0 7 * * *', async () => {
 
     console.log('Running cron job to scrape park times from WDW site')
-    
+
     const htmlRes = await axios({
       url: PARK_HOURS_URL,
       method: 'GET',
@@ -40,7 +40,7 @@ app.listen(port, async () => {
     })
 
     const { data: html } = htmlRes
-    
+
     const wdwScraper = new WdwScraper(html)
 
     data = await wdwScraper.scrapeParkTimes()
@@ -50,3 +50,6 @@ app.listen(port, async () => {
 
   job.start()
 })
+
+/* export for testing */
+export default app

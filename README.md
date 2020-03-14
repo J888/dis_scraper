@@ -8,6 +8,7 @@ A once-per-day cron job scrapes the Disney World website for:
 ```
 $ git clone https://github.com/J888/dis_scraper
 $ cd dis_scraper
+$ npm install
 $ PARK_HOURS_URL=https://disneyworld.disney.go.com/calendars/park-hours/ npm run start
 ```
 
