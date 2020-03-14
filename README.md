@@ -1,5 +1,5 @@
 
-![Build Status](https://travis-ci.org/J888/dis_scraper.svg?branch=master)
+[![Build Status](https://travis-ci.org/J888/dis_scraper.svg?branch=master)](https://travis-ci.org/J888/dis_scraper)
 
 ## What is this app?
 A once-per-day cron job scrapes the Disney World website for:
