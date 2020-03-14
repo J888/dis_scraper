@@ -1,6 +1,6 @@
-import axios from "axios"
-import { ScrapedParkInfoData } from "../types/allTypes"
-import cheerio from "cheerio"
+import axios from 'axios'
+import { ScrapedParkInfoData } from '../types/allTypes'
+import cheerio from 'cheerio'
 
 export default class WdwScraper {
   parkTimesHtml: string

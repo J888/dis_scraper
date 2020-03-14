@@ -1,5 +1,5 @@
-import fs from "fs"
-import { ScrapedParkInfoData } from "../types/allTypes"
+import fs from 'fs'
+import { ScrapedParkInfoData } from '../types/allTypes'
 
 export const writeOutToFile = async (data: ScrapedParkInfoData, filePath: string) => {
 
