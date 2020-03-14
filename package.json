@@ -2,7 +2,7 @@
   "name": "dis_scraper",
   "version": "1.0.0",
   "description": "Scrapes Disney's Website",
-  "main": "dist/main/app.js",
+  "main": "dist/app.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
