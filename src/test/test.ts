@@ -17,8 +17,8 @@ describe('WdwScraper', async () => {
   
   it('scrapes the correct number of park open and close times', async () => {
     const scraper: WdwScraper = new WdwScraper(parkTimesHtml)
-  const parkTimesData: any = await scraper.scrapeParkTimes()
-  console.log(parkTimesData)
+    const parkTimesData: any = await scraper.scrapeParkTimes()
+
     expect(parkTimesData.length).to.equal(6)
   })
 
