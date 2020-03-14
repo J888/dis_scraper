@@ -12,7 +12,7 @@ const ENDPOINTS = {
 }
 
 const app = express()
-const port = 8080
+const port = process.env.PORT || 5000
 
 app.get(ENDPOINTS.PARK_TIMES, async (req, res) => {
     fs.readFile(PARK_HOURS_GENERATED_DATA_PATH, {encoding: 'utf-8'}, (err, data) => {
