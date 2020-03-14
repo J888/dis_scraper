@@ -2,26 +2,32 @@
   "name": "dis_scraper",
   "version": "1.0.0",
   "description": "Scrapes Disney's Website",
-  "main": "dist/app.js",
+  "main": "dist/main/app.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register src/test/test.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/chai": "^4.2.10",
     "@types/cheerio": "^0.22.16",
     "@types/cron": "^1.7.2",
     "@types/express": "^4.17.3",
+    "@types/mocha": "^7.0.2",
     "@types/node": "^13.9.0",
     "axios": "^0.19.2",
+    "chai": "^4.2.0",
     "cheerio": "^1.0.0-rc.3",
     "cron": "^1.8.2",
     "express": "^4.17.1",
+    "mocha": "^7.1.0",
+    "ts-node": "^8.6.2",
     "tslint": "^6.1.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "typings": "^2.1.1"
   }
 }
